@@ -1,0 +1,4 @@
+package com.company.AutoMated.Test.Captin;
+
+public class Main {
+}
