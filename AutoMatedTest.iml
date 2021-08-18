@@ -423,5 +423,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="selenium-java-3.141.59" level="project" />
   </component>
 </module>
