@@ -1,5 +1,7 @@
 package com.company.AutoMated.Test.Admin;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class Edit_caption {
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\M7mad\\Downloads\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/m7mad7ayek/Desktop/chrome_webdriver/chromedriver");
         WebDriver driver=new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);

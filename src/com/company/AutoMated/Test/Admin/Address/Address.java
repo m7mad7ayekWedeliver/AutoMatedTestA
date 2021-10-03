@@ -1,4 +1,4 @@
-package com.company.AutoMated.Test.Admin;
+package com.company.AutoMated.Test.Admin.Address;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

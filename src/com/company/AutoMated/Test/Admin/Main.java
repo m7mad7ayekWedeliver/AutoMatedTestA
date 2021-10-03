@@ -1,5 +1,6 @@
 package com.company.AutoMated.Test.Admin;
 
+import com.company.AutoMated.Test.Admin.LoginCases.Login;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -8,7 +9,7 @@ public class Main {
         public static final String USERNAME = "mohammedhayek_k6hxJf";
         public static final String AUTOMATE_KEY = "UKRMxDwRkL7PG6CSHrMn";
         public static final String URLA = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-        public static void main(String[] args) throws MalformedURLException {
+        public static void main(String[] args) throws MalformedURLException, InterruptedException {
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.setCapability("os", "Windows");
             caps.setCapability("os_version", "10");
@@ -21,9 +22,8 @@ public class Main {
             init(caps,URLA);
     }
 
-    private static void init(DesiredCapabilities caps, String urla) throws MalformedURLException {
+    private static void init(DesiredCapabilities caps, String urla) throws MalformedURLException, InterruptedException {
             new Login(caps,urla);
-            new Address(caps,urla);
-            new Override_Zone(caps,urla);
+
     }
 }
