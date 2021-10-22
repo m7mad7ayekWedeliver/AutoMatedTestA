@@ -18,12 +18,10 @@ public class Main {
             caps.setCapability("name", "My First Test");
             caps.setCapability("build", "Build #1");
             caps.setCapability("project", "Sample sandbox project");
-
             init(caps,URLA);
     }
 
     private static void init(DesiredCapabilities caps, String urla) throws MalformedURLException, InterruptedException {
             new Login(caps,urla);
-
     }
 }

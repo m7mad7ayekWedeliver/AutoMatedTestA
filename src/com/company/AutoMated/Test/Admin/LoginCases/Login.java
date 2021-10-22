@@ -1,5 +1,6 @@
 package com.company.AutoMated.Test.Admin.LoginCases;
 
+import com.company.AutoMated.Test.URL_PORTAL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class Login {
+    URL_PORTAL url_portal=new URL_PORTAL();
     private DesiredCapabilities capabilities;
     private String URla;
     public Login(DesiredCapabilities caps, String urla) throws MalformedURLException, InterruptedException {
@@ -27,7 +29,8 @@ public class Login {
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-        driver.get("https://business.wedeliverspace.dev/captions");
+        driver.get(url_portal.getURL_dev());
+        //  driver.get(url_portal.getURL_staging());
         driver.findElement(By.className("ant-btn")).click();
         Thread.sleep(1000);
         String url_profile=driver.getCurrentUrl().substring(driver.getCurrentUrl().lastIndexOf('/')+1,driver.getCurrentUrl().length());
